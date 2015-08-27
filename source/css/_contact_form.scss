@@ -1,0 +1,56 @@
+.contact_form_wrapper {
+  padding: 1em 25px;
+}
+
+label{
+  display:block;
+  padding:5px 0;
+  @include serif_spaced();
+  color: $grey;
+}
+
+input{
+  width:60%;
+  padding:5px;
+  font-size: 15px;
+  border: 1px solid $grey;
+}
+
+textarea{
+  width:60%;
+  padding:5px;
+  font-size: 15px;
+  border: 1px solid $grey;
+}
+
+#submit {
+  border: 1px solid $orange;
+  background-color: $white;
+  @include sans_spaced();
+  color: $orange;
+  width:auto;
+  padding: 0.5em 2em;
+  margin-top:1em;
+    &:active {
+      background: $orange;
+      color: $white;
+    }
+}
+
+.social {
+  margin: 0 15px;
+}
+.social_span {
+   font-family: $font-family-serif;
+   text-indent: 2em;
+   color: $dark_grey;
+}
+
+.phones {
+  float:left;
+  margin-top: 1em;
+  margin-right: 2em;
+}
+.social_div {
+  float:left;
+}

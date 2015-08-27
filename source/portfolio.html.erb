@@ -1,0 +1,36 @@
+---
+page_classes: 'portfolio'
+#page_title: 'Portfolio'
+#page_description: ''
+section_class: ''
+---
+
+<h1 class="page-title">portfolio</h1>
+
+<div class="section group">
+  <%= partial("partials/image_title", :locals => { cols: "2", link: "/portfolio/kitchens/classic", url: "/images/kitchens/classic/1.jpg", title: "classic kitchen" }) %>
+
+  <%= partial("partials/image_title", :locals => { cols: "2", link: "/portfolio/bathrooms/renaissance", url: "/images/bathrooms/renaissance/1.jpg", title: "renaissance bathroom" }) %>
+</div>
+
+<div class="section group">
+  <%= partial("partials/image_title", :locals => { cols: "4", link: "/portfolio/kitchens/with_a_view", url: "/images/kitchens/with_a_view/1.jpg", title: "with a view" }) %>
+
+  <%= partial("partials/image_title", :locals => { cols: "4", link: "/portfolio/bathrooms/black_white", url: "/images/bathrooms/black_white/1.jpg", title: "black & white" }) %>
+
+  <%= partial("partials/image_title", :locals => { cols: "4", link: "/portfolio/kitchens/curvy_classic", url: "/images/kitchens/curvy_classic/1.jpg", title: "curvy classic" }) %>
+
+  <%= partial("partials/image_title", :locals => { cols: "4", link: "/portfolio/bathrooms/centre_stage", url: "/images/bathrooms/centre_stage/1.jpg", title: "centre stage" }) %>
+</div>
+
+<div class="section group">
+  <%= partial("partials/image_title", :locals => { cols: "4", link: "/portfolio/interiors/eighties_refresh", url: "/images/interiors/eighties_refresh/1.jpg", title: "80s refresh" }) %>
+
+  <%= partial("partials/image_title", :locals => { cols: "4", link: "/portfolio/kitchens/open_airy", url: "/images/kitchens/open_airy/1.jpg", title: "open & airy" }) %>
+
+  <%= partial("partials/image_title", :locals => { cols: "4", link: "/portfolio/interiors/kiwi_retro", url: "/images/interiors/kiwi_retro/1.jpg", title: "kiwi retro" }) %>
+
+  <%= partial("partials/image_title", :locals => { cols: "4", link: "/portfolio/interiors/traditional", url: "/images/interiors/traditional/1.jpg", title: "traditional" }) %>
+</div>
+
+<%= partial("partials/contact_footer", :locals => {  }) %>

@@ -14,7 +14,7 @@ set :env_name, env_name
 set :font_dir, 'fonts'
 set :css_dir, 'css'
 set :js_dir, 'js'
-set :images_dir, 'img'
+set :images_dir, 'images'
 
 set :url_root, ApplicationConfig::BASE_URL
 
@@ -24,6 +24,14 @@ activate :gzip
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions', 'Explorer >= 9']
   config.cascade  = false
+end
+
+activate :deploy do |deploy|
+  deploy.method   = :ftp
+  deploy.host     = 'delorenzodesign.co.nz'
+  deploy.path     = '/public_ftp'
+  deploy.user     = 'delorenz'
+  deploy.password = 'kashgar'
 end
 
 # Build-specific configuration

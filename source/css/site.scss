@@ -2,3 +2,41 @@
 @import "_vars";
 @import "_mixins";
 @import "_document_structure";
+@import "_contact_form";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+.text {
+  font-size: 0.8em ;
+}
+
+h1 {
+  clear:both;
+  font-family: $font-family-serif;
+  font-style: normal;
+  font-variant: small-caps;
+  text-align: center;
+  letter-spacing:6px;
+  font-weight:lighter;
+}
+
+h3 {
+  @include serif_spaced();
+}
+
+.page-title {
+  font-size: 2.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+blockquote {
+  font-family: $font-family-serif;
+  font-size:1.1em;
+  font-style:italic;
+}
+
+.background {
+  background: $light_grey url('/images/bg_pattern.png');
+  background-repeat:repeat;
+  padding: 1em 0;
+}

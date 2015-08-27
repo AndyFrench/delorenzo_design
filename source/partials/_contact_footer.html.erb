@@ -1,0 +1,24 @@
+<%= stylesheet_link_tag 'contact_footer' %>
+
+<div class="background">
+
+  <div class="section group pad">
+    <div class="col span_1_of_2">
+      <div class="about_footer">
+        <h3 class="heading">about debra</h3>
+        <img class="contact_about_image" src="/images/debs_about.jpg">
+          <p class="about_content">Debra has managed to turn design philosophy into an art form. A specialist interior designer with multiple
+          awards in kitchen and bathroom design, she is passionate about design and creating fabulous spaces. As well
+          as designing fabulous spaces worldwide, Debra is also an internationally recognised artist. Working with
+          textiles, her pieces have been exhibited around the world and are in strong demand.</p>
+          <p class="about_content">To organise a time to have a no-obligation chat to Debra about what you want to
+          achieve, please use the contact form.</p>
+      </div>
+    </div>
+    <div class="col span_1_of_2">
+      <h3 class="heading">contact debra</h3>
+      <%= partial("partials/contact_form", :locals => { email: $email }) %>
+    </div>
+  </div>
+
+</div>

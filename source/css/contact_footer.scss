@@ -1,0 +1,21 @@
+@import "_columns";
+@import "_vars";
+
+.text {
+  font-size: 0.8em;
+}
+
+.heading {
+  font-size: 1.17em;
+}
+
+.about_footer {
+  padding: 0 2em;
+  > p {
+  font-size: 0.8em;
+  }
+}
+
+.contact_form_wrapper {
+  padding: 0 0 2em 0;
+}

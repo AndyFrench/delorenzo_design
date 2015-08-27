@@ -1,0 +1,38 @@
+@import "_vars";
+@import "_image_title";
+@import "_columns";
+@import "mixins";
+
+#portfolio {
+  @include selected_menu_item();
+}
+
+.portfolio_main {
+  margin: 0 auto;
+}
+
+.img_background_override {
+  max-height: auto;
+  position: absolute;
+  top: 0; bottom: 0; right: 0; left: 0;
+  margin:0 auto;
+}
+
+.span_1_of_4 {
+  width: 24%;
+}
+
+@media only screen and (max-width: 640px) {
+  .span_1_of_2 { width: 98%;}
+  .span_1_of_4 { width: 49.2%;}
+  .img_background_override {margin: 0 auto;}
+}
+
+.portfolio_wrapper {
+  max-width: $max_width;
+}
+
+.content {
+  display: inline-block;
+  text-align: left;
+}

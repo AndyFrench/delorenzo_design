@@ -1,0 +1,47 @@
+@import "_mixins";
+
+.image_title_wrapper {
+  width:100%;
+  display: inline-block;
+  position: relative;
+}
+.image_title_wrapper:after {
+  padding-top: 66.66%; /*666/1000 x 100*/
+  display: block;
+  content: '';
+}
+
+.img_background {
+  text-align: center;
+  max-height: $image-max-height;
+  max-width: $image-max_width;
+  border: #a0a0a0 solid 1px;
+  margin: 20px;
+  background-size:contain;
+}
+
+.img_background:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+ }
+
+.centered {
+  z-index:2;
+  display: inline-block;
+  vertical-align: middle;
+  background: rgba(0,0,0,0.5);
+  min-width: 50%;
+  border: #fff solid 2px;
+  font-size:0.75em;
+  h3 {
+    letter-spacing:2px;
+    color: #fff;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding:0 2em;
+    text-transform: uppercase;
+  }
+}

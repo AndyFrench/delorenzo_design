@@ -1,0 +1,43 @@
+@import "_vars";
+@import "_mixins";
+
+dl#simple-gallery {
+  padding: 2.5%;
+  position: relative;
+  height: 100%;
+  dt {
+    width: 15%;
+    min-width: 50px;
+    cursor: pointer;
+    margin-bottom: 1%;
+    img {
+      align: center;
+      height: auto;
+    }
+    &:focus+dd {
+      opacity: 1;
+    }
+    img.port {
+      max-width:67%;
+      margin-left: 17%;
+    }
+  }
+  dd {
+    position: absolute;
+    width:72%;
+    top: 0rem;
+    left: 18%;
+    opacity: 0;
+    transition: .7s opacity;
+    padding-top: 2.5%;
+    img {
+      //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 0 8px $black_30;
+      align:center;
+      max-height: 500px;
+    }
+    img.port {
+      margin-left:20%;
+    }
+  }
+}

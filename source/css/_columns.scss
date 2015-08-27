@@ -1,0 +1,23 @@
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0;
+  margin: 1em 0;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  float:left;
+  margin: 0.5%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+.span_1_of_2 {
+  width: 49.2%;
+}

@@ -1,0 +1,24 @@
+---
+page_classes: 'contact'
+#page_title: 'Contact'
+#page_description: ''
+section_class: ''
+---
+<%= stylesheet_link_tag 'contact' %>
+
+<div class="background">
+  <h1 class="page-title">contact debra</h1>
+
+  <div class="section group pad">
+    <div class="col span_1_of_2">
+      <h3>debra delorenzo</h3>
+        <img class="contact_about_image" src="/images/debs_about.jpg">
+      <div class="text">
+        Whatever your goals or questions, get in touch and Debra will talk you through your options.
+      </div>
+    </div>
+    <div class="col span_1_of_2">
+      <%= partial("partials/contact_form", :locals => { email: $email }) %>
+    </div>
+  </div>
+</div>

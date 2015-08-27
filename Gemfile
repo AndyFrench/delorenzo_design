@@ -6,6 +6,7 @@ gem 'middleman-cloudfront'
 gem 'middleman-livereload'
 gem 'middleman-autoprefixer'
 gem 'middleman-minify-html'
+gem 'middleman-deploy', '~> 1.0'
 
 group :development do
   gem 'rake'

@@ -1,4 +1,8 @@
+@import "_vars";
 @mixin hide_text() {text-indent:-9999em;}
 @mixin list_stripped() {list-style:none; margin:0; padding:0;}
 @mixin off_left() {position:absolute; left:-999em; top:-999em;}
 @mixin clearfix() {content:""; display:block; clear:both; height:0;}
+@mixin serif_spaced() {font-variant: small-caps;letter-spacing:2px;font-family: $font-family-serif;}
+@mixin sans_spaced() {font-variant: small-caps;letter-spacing:2px;font-family: $font-family-sans;}
+@mixin selected_menu_item() {color: $selected_nav_color;pointer-events: none;cursor: default;}

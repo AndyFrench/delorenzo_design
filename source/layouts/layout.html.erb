@@ -1,61 +1,56 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title><%= site_name %><% if current_page.data.page_title %> - <%= current_page.data.page_title %><% end %></title>
-		<% if current_page.data.page_description %>
-		<meta name="description" content="<%= current_page.data.page_description %>">
-		<% end %>
 		<script>document.documentElement.className = 'js';</script>
-		<%= inline_stylesheet '_homepage' if current_page.data.page_classes.include? 'page_home' %>
-		<%= stylesheet_link_tag 'site' unless current_page.data.page_classes.include? 'page_home' %>
-		<!--[if lt IE 9]>
-		<%= javascript_include_tag 'ie' %>
-		<![endif]-->
+		<%= stylesheet_link_tag 'site' %>
+		<%= stylesheet_link_tag 'gallery' if current_page.data.page_classes.include? 'gallery' %>
+		<%= stylesheet_link_tag 'home' if current_page.data.page_classes.include? 'home' %>
+		<%= stylesheet_link_tag 'portfolio' if current_page.data.page_classes.include? 'portfolio' %>
+		<!-- <%= javascript_include_tag 'gallery' if current_page.data.page_classes.include? 'gallery' %> -->
 	</head>
 	<body class="<% if current_page.data.section_class %> <%= current_page.data.section_class %><% end %><% if current_page.data.page_classes %> <%= current_page.data.page_classes %><% end %>">
-		<script>document.body.className += ' menu_closed';</script>
-		<nav class="a11y">
-			<ul>
-				<li><a href="#menu">Skip to main menu</a></li>
-				<li><a href="#body">Skip to top</a></li>
-			</ul>
-		</nav>
+
 		<header role="banner">
-			<h1><a href="/"><%= site_name %></a></h1>
+			<h1 class="site-title"><a href="/"><p class="site-title-debra">debra delorenzo</p>interiors</a></h1>
+			<nav role="navigation">
+				<ul class="nav">
+				  <li><a href="/" id="home">home</a></li>
+				  <li class="nav_portfolio drop"><a href="/portfolio/" id="portfolio">portfolio</a>
+				    <ul>
+				      <li><a href="/portfolio/kitchens/classic" id="kitchen">kitchen</a></li>
+				      <li><a href="/portfolio/bathrooms/renaissance" id="bathroom">bathroom</a></li>
+				      <li><a href="/portfolio/interiors/kiwi_retro" id="interior">interior</a></li>
+				    </ul>
+				  </li>
+				  <li><a href="/about" id="about">about</a></li>
+				  <li><a href="/contact" id="contact">contact</a></li>
+				</ul>
+	    </nav>
 		</header>
-		<nav role="navigation">
-			<h2 id="menu_link">Menu</h2>
-			<ul id="menu">
-				<li><a href="/">Home</a></li>
-			</ul>
-		</nav>
-		<hr>
-		<main role="main">
+
+		<article role="main">
 			<%= yield %>
-		</main>
-		<hr>
+		</article>
+
 		<footer role="contentinfo">
-			<p>Built with love by <a href="https://abletech.nz">Abletech</a></p>
-			<% if env_name == 'development' %>
-			<p>Debugging</p>
-			<ul>
-				<li><a href="/__middleman/">Middleman Config</a></li>
-			</ul>
-			<% end %>
+			<div class="banner_container">
+
+			</div>
 		</footer>
 		<% if content_for?(:javascript) %>
 			<%= yield_content :javascript %>
 		<% end %>
-		<script>
+		<!-- <script>
 			window.addEventListener('load', function(){
 				var s = document.createElement('script');
 				s.async = 1;
 				s.src = '<%= asset_path(:js, "site") %>';
 				document.body.appendChild(s);
 			});
-		</script>
+		</script> -->
 	</body>
 </html>

@@ -1,12 +1,17 @@
 ---
-page_classes: 'page_home'
-#page_title: ''
+page_classes: 'home'
+#page_title: 'Debra Delorenzo Interiors'
 #page_description: ''
 section_class: 'home'
 ---
-<header>
-	<h1>Index</h1>
-</header>
-<section>
-	<p>This is your homepage, located at <code>source/index.html.erb</code></p>
-</section>
+
+<div class="image_title_wrapper">
+  <div class="img_background full-width">
+    <a href="/portfolio" class="centered">
+        <h3>view portfolio</h3>
+    </a>
+  </div>
+</div>
+<%= partial("partials/contact_footer", :locals => {  }) %>
+
+

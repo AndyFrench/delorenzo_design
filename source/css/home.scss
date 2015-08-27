@@ -1,0 +1,13 @@
+@import "_vars";
+@import "_image_title";
+
+#home {
+  @include selected_menu_item();
+}
+
+.full-width {
+  position: absolute;
+  top: 0; bottom: 0; right: 0; left: 0;
+  margin:0 auto;
+  background-image: url("/images/kitchens/classic/1.jpg");
+}

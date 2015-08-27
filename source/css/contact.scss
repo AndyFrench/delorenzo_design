@@ -1,0 +1,10 @@
+@import "_columns";
+@import "mixins";
+
+#contact {
+  @include selected_menu_item();
+}
+
+.pad {
+  padding: 0 2em 2em 2em;
+}

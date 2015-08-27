@@ -1,0 +1,19 @@
+@import "mixins";
+
+#about {
+  @include selected_menu_item();
+}
+
+.about_text {
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2em;
+}
+
+.about_image {
+    display: block;
+  padding: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
