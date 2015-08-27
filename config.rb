@@ -28,10 +28,10 @@ end
 
 activate :deploy do |deploy|
   deploy.method   = :ftp
-  deploy.host     = 'delorenzodesign.co.nz'
-  deploy.path     = '/public_ftp'
-  deploy.user     = 'delorenz'
-  deploy.password = 'kashgar'
+  deploy.host     = 'TODO'
+  deploy.path     = 'TODO'
+  deploy.user     = 'TODO'
+  deploy.password = 'TODO'
 end
 
 # Build-specific configuration
